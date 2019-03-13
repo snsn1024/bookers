@@ -6,3 +6,6 @@
 	<%= f.text_area :body %>
 	<%= f.submit 'Update Book' %>
 	<% end %>
+
+	<%= link_to "Show", Post.find(params[:id]) %> 
+	<%= link_to "Back", '/posts' %> 
