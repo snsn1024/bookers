@@ -1,0 +1,7 @@
+<h1>Book</h1>
+<% @posts.each do |post| %>
+	<p>Title</p>
+	<span> <%= link_to post.title, post_path(post.id) %> </span>
+	<p>Body</p>
+	<span> <%= post.body %> </span>
+<% end %>
