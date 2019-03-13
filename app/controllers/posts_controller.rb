@@ -5,8 +5,12 @@ class PostsController < ApplicationController
 
   def create
 	post = Post.new(post_params)
-	post.save
-	redirect_to post_path(post.id)
+	if post.save
+       flash[:notice]= "Book was successfully updated."
+	   redirect_to post_path(post.id)
+    else
+      render action: :new
+    end
   end
 
   def index
@@ -23,8 +27,11 @@ class PostsController < ApplicationController
 
   def update
   	post = Post.find(params[:id])
-  	post.update(post_params)
-  	redirect_to post_path(post.id)
+  	if post.update(post_params)
+       redirect_to post_path(post.id),notice: "Book was successfully updated."
+    else
+       render action: :new
+    end
   end
 
   def destroy
