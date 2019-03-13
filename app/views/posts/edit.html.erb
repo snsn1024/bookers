@@ -7,5 +7,5 @@
 	<%= f.submit 'Update Book' %>
 	<% end %>
 
-	<%= link_to "Show", Post.find(params[:id]), class: "show_#{post.id}"	%> 
+	<%= link_to "Show", Post.find(params[:id]), class: "show_#{@post.id}" %> 
 	<%= link_to "Back", '/posts', class: "back"	%> 

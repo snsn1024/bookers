@@ -7,6 +7,6 @@
 <p>Body</p>
 <p> <%= @post.body %> </p>
 
-<%= link_to "Edit", edit_post_path(@post.id), class: "edit_#{post.id}" %>
+<%= link_to "Edit", edit_post_path(@post.id),class: "edit_#{@post.id}" %>
 
 <%= link_to 'Back', :back, class: "back" %> 
